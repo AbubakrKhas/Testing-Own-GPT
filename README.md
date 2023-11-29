@@ -12,7 +12,7 @@ That is how i started to create App;
 *cd my-app
 *npm start
 
-I installed bootstrap for styling but actually didint use it almost
+I installed bootstrap for styling but actually didint use it almost and you can add or change to Tailwindcss or something like this
 
 
 
@@ -31,7 +31,7 @@ I installed bootstrap for styling but actually didint use it almost
 
 
 
-
+To attach front-end to back-end
 
 in package.json add
 
@@ -42,17 +42,18 @@ in package.json add
   "server": "nodemon index.js --ignore client"
 
 
+And then also in back-end need to be clarified an API 
 
 - Backend Python
 
+
 You need to install Langchain for Python 
-Get Open AI Api Key
-
-
-
+Get Open AI Api Key really needed
+and then set your own API key into file back-end\flask-server\constants.py
 
 
 After the installation check if works 
+
 And then create a little server for testing usin Python Flask, flask_cors and Virtual environment
 
 *pip install flask
