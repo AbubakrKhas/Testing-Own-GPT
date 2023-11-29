@@ -28,6 +28,6 @@ and then in terminal
 $ python chatgpt.py "hier your question"
 
 your gpt for now know only basic things or sometimes nothing,
-you can fill your own gpt brain to add some infos to file data.txt that attached to our chatgpt.py file
+you can fill your own gpt brain within adding some infos to file data.txt that attached to our chatgpt.py file
 
 Enjoy it
