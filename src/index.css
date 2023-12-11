@@ -8,6 +8,8 @@ body{
     height: 100%;
     width: 100vw;
     overflow-x: hidden;
+
+    cursor: pointer;
 }
 
 .link-grow{
@@ -18,6 +20,19 @@ body{
 .hovered-grow{
     color: #fff;
 }
+
+.element{
+    position: absolute;
+
+    color: rgb(161, 255, 19);
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    z-index: 1000 !important;
+    transition: 1s;
+    font-size: 1.2rem;
+}
+
 
 .appMain{
     position: relative;
@@ -126,17 +141,21 @@ body{
 }
 
 .logo{
-    font-size: 30px;
+    font-size: 20px;
     transition: all 0.3s;
 
 }
 
 .bars{
     display: flex;
-    font-size: 35px;
+    font-size: 25px;
 
     cursor: pointer;
     transition: all 0.7s;
+}
+
+.bars:hover{
+    color: lightgreen;
 }
 
 @media screen and (max-width: 768px){

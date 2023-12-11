@@ -34,19 +34,22 @@ const App = () => {
             <Route path="/newchat" element={<Newchat />} />
             <Route path="/history" element={<HistorySide />} />
             <Route path="/current-user" element={<CurrentUser />}
-             />
+            />
 
           </Routes>
         </Sidebar>
       </BrowserRouter>
-      <div className="input-container">
-        {(data.members && data.members.length > 0) ? (
-          data.members.map((member, i) => (
-            <p key={i}>{member}</p>
-          ))
-        ) : (
-          <p>Loading...</p>
-        )}
+      <div className="input-container ">
+        <div className='absolute top-0 left-20 block w-1/2 h-1/4 text-white tracking-wider text-m text-center'>
+          {(data.members && data.members.length > 0) ? (
+            data.members.map((member, i) => (
+              <p key={i}>{member}</p>
+            ))
+          ) : (
+            <p>Backend is currently off...</p>
+          )}
+        </div>
+
         <InputComponent />
       </div>
       <Footer />

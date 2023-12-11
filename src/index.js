@@ -4,7 +4,10 @@ import "./components/useToggle.js";
 
 // CSS Attachments
 import "./index.css";
+import "./components/input-and-result/inputed.css"
 import "./style/teilwindcss.css"
+import "vanilla-tilt"
+
 
 import App from "./App";
 

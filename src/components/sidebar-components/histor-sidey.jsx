@@ -4,7 +4,7 @@ class HistorySide extends Component {
     state = {  } 
     render() { 
         return (
-            <div className="relative block bg-zinc-800 ml-5 mt-5 rounded ">
+            <div className="relative block bg-zinc-800 ml-5 mt-5 rounded w-56">
                 <div >
                     <div className="text-white text-base p-5">
                         <p>Your typed history :</p>

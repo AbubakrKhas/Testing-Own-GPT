@@ -64,8 +64,11 @@ const InputComponent = () => {
         <label htmlFor="search-engine" className='label-input'>
           Was soll das denn?
         </label>
+        <div id="btn-send">
+          <a onClick={handleButtonClick}><span>Send</span><i></i></a>
+        </div>
       </div>
-      {/* <button onClick={handleButtonClick}>Send Text</button> */}
+
     </div>
   );
 };

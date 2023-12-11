@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaTh, FaUserAlt, FaAddressCard, FaBars } from 'react-icons/fa';
+import { FaPlus, FaUserAlt, FaAddressCard, FaBars } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = ({ children }) => {
@@ -11,7 +11,7 @@ const Sidebar = ({ children }) => {
     {
       path: '/',
       name: 'Newchat',
-      icon: <FaTh />,
+      icon: <FaPlus />,
     },
     {
       path: '/history',
@@ -31,7 +31,7 @@ const Sidebar = ({ children }) => {
       <div style={{ width: isOpen ? '250px' : '50px' }} className="sidebar">
         <div className="top-section">
           <h1 style={{ opacity: isOpen ? '1' : '0',pointerEvents: "none" }} className="logo">Logo</h1>
-          <div style={{ marginLeft: isOpen ? '110px' : '-75px' }} className="bars">
+          <div style={{ marginLeft: isOpen ? '130px' : '-45px' }} className="bars">
             <FaBars onClick={toggle} />
           </div>
         </div>
@@ -42,7 +42,7 @@ const Sidebar = ({ children }) => {
           </NavLink>
         ))}
       </div>
-      <main className='relative w-80'>{children}</main>
+      <main className='relative w-full'>{children}</main>
     </div>
   );
 };
