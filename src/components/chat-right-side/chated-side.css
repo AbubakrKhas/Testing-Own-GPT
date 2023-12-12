@@ -1,0 +1,125 @@
+.menu{
+    position: relative;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu .toggle{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: #fff;
+    color: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.menu > .toggle.active {
+    transform: rotate(315deg);
+    box-shadow: 0 0 0 45px #fff;
+    background: #222;
+    color: #fff;
+}
+
+.menu > li {
+    position: absolute;
+    right: 115px;
+    list-style: none;
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(33px);
+    transform-origin: 110px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1000 !important;
+}
+
+.menu.active > li {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu > li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    font-size: 1.55em;
+    color: #222;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    border-radius: 50%;
+}
+.menu.active > li.active{
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(10px);
+    background: transparent !important;
+
+}
+
+.indicator{
+    position: absolute;
+    left: calc(-50% + 75px);
+    transform-origin: right;
+    width: 50px;
+    height: 1px;
+
+    pointer-events: none;
+    transition: 0.5s;
+}
+.indicator::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -48px;
+
+    width: 40px;
+    height: 40px;
+    background: #222;
+    box-shadow: 0 0 0 6px #333;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu.active .indicator::before{
+    opacity: 1;
+    top: -20px;
+    right: -30px;
+    background: greenyellow;
+    box-shadow: 0 0 0 5px #222;
+}
+
+.menu > li:nth-child(2).active ~ .indicator{
+    transform: translateX(-25px) rotate(0deg);
+}
+.menu > li:nth-child(3).active ~ .indicator{
+    transform: translateX(-25px) rotate(45deg);
+}
+.menu > li:nth-child(4).active ~ .indicator{
+    transform: translateX(-25px) rotate(90deg);
+}
+.menu > li:nth-child(5).active ~ .indicator{
+    transform: translateX(-25px) rotate(135deg);
+}
+.menu > li:nth-child(6).active ~ .indicator{
+    transform: translateX(-25px) rotate(180deg);
+}
+.menu > li:nth-child(7).active ~ .indicator{
+    transform: translateX(-25px) rotate(225deg);
+}
+.menu > li:nth-child(8).active ~ .indicator{
+    transform: translateX(-25px) rotate(270deg);
+}
+.menu > li:nth-child(9).active ~ .indicator{
+    transform: translateX(-25px) rotate(315deg);
+}

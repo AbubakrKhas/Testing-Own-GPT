@@ -48,7 +48,7 @@ const Footer = () => {
                         <a href="/"><p>STV</p></a>
                     </div>
                     <div className="sb_footer-links_div">
-                        <h4>Scan QR-code</h4>
+                        <h4>Find QR-code</h4>
                         <p className="qr-img"><img src={qr} alt="" /></p>
                     </div>
                     <div className="sb_footer-links_div">

@@ -6,6 +6,7 @@ import HistorySide from "./components/sidebar-components/histor-sidey.jsx";
 import Sidebar from './components/Sidebar';
 import Newchat from './components/sidebar-components/new-chat.jsx';
 import CurrentUser from './components/sidebar-components/current-user.jsx';
+import ChatSide from './components/chat-right-side/chat-friends.jsx';
 
 import InputComponent from './components/input-and-result/Input-container.jsx';
 import Footer from './components/footer/footer.jsx';
@@ -38,6 +39,10 @@ const App = () => {
 
           </Routes>
         </Sidebar>
+        <div className="chat-side-div">
+          <ChatSide />
+        </div>
+
       </BrowserRouter>
       <div className="input-container ">
         <div className='absolute top-0 left-20 block w-1/2 h-1/4 text-white tracking-wider text-m text-center'>

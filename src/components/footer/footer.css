@@ -109,7 +109,9 @@ hr{
 
 .qr-img{
     position: relative;
-    width: 60px;
+    top: 50px;
+    left: 20px;
+    width: 40px;
     z-index: 2000 !important;
 }
 

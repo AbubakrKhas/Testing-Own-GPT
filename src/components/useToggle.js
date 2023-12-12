@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set the desired threshold values here
   const upperThresholdHeight = 45;
   const lowerThresholdHeight = 260;
-  const middleWidthThreshold = 180;
+  const middleWidthThreshold = 220;
 
   document.addEventListener("mousemove", function (e) {
     cursor.style.cssText = cursor2.style.cssText =
@@ -66,3 +66,4 @@ document.addEventListener("DOMContentLoaded", function () {
     return letter;
   }
 });
+
