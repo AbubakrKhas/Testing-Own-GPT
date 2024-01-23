@@ -2,15 +2,18 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from datetime import datetime
-import chatgpt  # Import your custom module (gpt.py)
+import chatgpt  # Import your custom module (chatgpt.py)
 
 app = Flask(__name__)
 CORS(app)
 
 @app.route("/members", methods=["GET"])
 def get_members():
-    members_data = {"members": ["This text is from Backend "]}
-    return jsonify(members_data)
+    # Call the GPT module to get the processed result
+    processed_result = chatgpt.process_text("This text came from Backend localhost:5000/members")
+
+    # Include the processed result in the JSON response
+    return jsonify({"members": [processed_result]})
 
 @app.route("/send-text", methods=["POST"])
 def receive_text():
